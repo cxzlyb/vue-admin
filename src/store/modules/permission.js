@@ -38,7 +38,6 @@ const state = {
   routes: [...constantRoutes],
   addRoutes: []
 };
-
 const mutations = {
   SET_ROUTES: (state, routes) => {
     state.addRoutes = routes;
@@ -62,7 +61,6 @@ const actions = {
 };
 
 export default {
-  namespaced: true,
   state,
   mutations,
   actions
