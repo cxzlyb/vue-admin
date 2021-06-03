@@ -165,7 +165,9 @@ export default {
     }
   },
   created () {
-    this.changeThemeColor(this.theme);
+    if (this.chalk) {
+      this.changeThemeColor(this.theme);
+    }
   }
 };
 </script>

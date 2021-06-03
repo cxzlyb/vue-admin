@@ -2,7 +2,7 @@
   <div ref="rightPanel" :class="{show:isSetting}" class="rightPanel-container">
     <div class="rightPanel-background" />
     <div class="rightPanel">
-      <div class="handle-button" v-if="isSetting" :style="{'top':buttonTop+'px','background-color':'rgb(24,144,255)'}" @click="CHANGE_ISSETTING(false)">
+      <div class="handle-button" v-if="isSetting" :style="{'top':buttonTop+'px','background-color':theme}" @click="CHANGE_ISSETTING(false)">
         <i :class="isSetting?'el-icon-close':'el-icon-setting'" />
       </div>
       <div class="rightPanel-items">
@@ -29,7 +29,8 @@ export default {
   },
   computed: {
     ...mapState('settings', [
-      'isSetting'
+      'isSetting',
+      'theme'
     ])
   },
   watch: {
