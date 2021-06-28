@@ -4,7 +4,7 @@ function resolve (dir) {
   return path.resolve(__dirname, dir);
 }
 module.exports = {
-  lintOnSave: process.env.NODE_ENV !== "production",
+  lintOnSave: 'error',
   configureWebpack: {
     name: defaultSettings.title
   },
