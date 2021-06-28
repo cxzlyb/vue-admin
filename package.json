@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -48,7 +49,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,vue}": [
+    "**/*.{js,vue}": [
       "vue-cli-service lint",
       "git add"
     ]
