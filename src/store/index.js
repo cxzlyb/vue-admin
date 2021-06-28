@@ -5,7 +5,7 @@ import createPersistedState from 'vuex-persistedstate';
 Vue.use(Vuex);
 const files = require.context("./modules", false, /\.js$/);
 const modules = {};
-const aaa = 1;
+const b = 1;
 files.keys().forEach(key => {
   const name = require("path").basename(key, ".js");
   modules[name] = files(key).default || files(key);
