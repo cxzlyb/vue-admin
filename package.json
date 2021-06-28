@@ -43,15 +43,16 @@
     "svg-sprite-loader": "^6.0.7",
     "vue-template-compiler": "^2.6.11"
   },
-  "husky": {
+  "husky":{
     "hooks": {
-      "pre-commit": "npm run lint"
+        "pre-commit": "lint-staged"
     }
-  },
+},
   "lint-staged": {
-    "**/*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
+      "src/**": [
+          "prettier --config .prettierrc --write",
+          "eslint --fix",
+          "git add"
+      ]
   }
 }
